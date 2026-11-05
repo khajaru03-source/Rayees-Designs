@@ -35,7 +35,7 @@ export default defineConfig(() => {
     plugins: [react(), tailwindcss(), contactApiPlugin()],
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, '.'),
+        '@': path.resolve(import.meta.dirname || process.cwd(), '.'),
       },
     },
     server: {
